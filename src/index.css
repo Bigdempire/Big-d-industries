@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@keyframes blob {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+@keyframes bounce-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes ice-fall {
+  0% {
+    transform: translate3d(0, -15vh, 0) rotate(8deg) scale(0.9);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.45;
+  }
+  50% {
+    transform: translate3d(18px, 45vh, 0) rotate(16deg) scale(1);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate3d(-14px, 115vh, 0) rotate(24deg) scale(0.92);
+    opacity: 0;
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s infinite;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+.animate-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, #0f3460, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Flowing ice effect */
+.ice-flow-layer {
+  overflow: hidden;
+}
+
+.ice-piece {
+  position: absolute;
+  top: 0;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(103, 232, 249, 0.45) 55%, rgba(34, 211, 238, 0.08));
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  box-shadow: 0 0 18px rgba(103, 232, 249, 0.2), inset 0 0 8px rgba(255, 255, 255, 0.55);
+  filter: blur(0.2px);
+  animation-name: ice-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.ice-piece::before {
+  content: "";
+  position: absolute;
+  inset: 18% 24%;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.18));
+  opacity: 0.8;
+}
+
+/* Shadow enhancements */
+.shadow-xl-custom {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}

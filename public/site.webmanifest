@@ -1,0 +1,17 @@
+{
+  "name": "BIGD Refrigeration Services",
+  "short_name": "BIGD Refrigeration",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#082f49",
+  "description": "Professional AC repair, fridge servicing, and cold room maintenance.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
